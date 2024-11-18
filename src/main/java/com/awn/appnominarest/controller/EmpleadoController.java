@@ -2,8 +2,7 @@ package com.awn.appnominarest.controller;
 
 import com.awn.appnominarest.model.Empleado;
 import com.awn.appnominarest.model.Nominas;
-import com.awn.appnominarest.service.EmpleadoService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.awn.appnominarest.service.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,8 +12,11 @@ import java.util.List;
 @RequestMapping("/api")
 public class EmpleadoController {
 
-    @Autowired
-    private EmpleadoService empleadoService;
+    private final IEmpleadoService empleadoService;
+
+    public EmpleadoController(IEmpleadoService empleadoService) {
+        this.empleadoService = empleadoService;
+    }
 
     // Endpoints para Empleados
 

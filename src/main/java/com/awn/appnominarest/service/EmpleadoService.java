@@ -12,8 +12,8 @@ import java.util.Optional;
 @Service
 public class EmpleadoService  implements IEmpleadoService{
 
-    private EmpleadoRepository empleadoRepository;
-    private NominasRepository nominasRepository;
+    private final EmpleadoRepository empleadoRepository;
+    private final NominasRepository nominasRepository;
 
     public EmpleadoService(EmpleadoRepository empRepository, NominasRepository nomRepository) {
         this.empleadoRepository = empRepository;

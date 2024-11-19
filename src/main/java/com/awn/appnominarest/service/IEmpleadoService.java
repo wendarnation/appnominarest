@@ -1,6 +1,6 @@
 package com.awn.appnominarest.service;
 
-import com.awn.appnominarest.model.*;
+import com.awn.appnominarest.dto.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,20 +9,20 @@ import java.util.Optional;
 @Service
 public interface IEmpleadoService {
 
-    List<Empleado> findAllEmpleados();
+    List<EmpleadoDTO> findAllEmpleados();
 
-    Optional<Empleado> findEmpleadoByDni(String dni);
+    Optional<EmpleadoDTO> findEmpleadoByDni(String dni);
 
-    Empleado saveEmpleado(Empleado emp);
+    EmpleadoDTO saveEmpleado(EmpleadoDTO emp);
 
     void deleteEmpleado(String dni);
 
-    Empleado updateEmpleado(String dni, Empleado emp);
+    EmpleadoDTO updateEmpleado(String dni, EmpleadoDTO emp);
 
 
 //    Métodos para nóminas
 
-    List<Nominas> findAllNominas();
+    List<NominasDTO> findAllNominas();
 
-    Optional<Nominas> findNominasByDni(String dni);
+    Optional<NominasDTO> findNominasByDni(String dni);
 }
